@@ -1,0 +1,52 @@
+<div class="container" style="margin-top: 70px;">
+    <table>
+            <tr>
+                    <td><b>
+                            <p style="color:green;">Enter Name to be searched which meet either on first name or LastName or part of any and click on Search button .</p>
+                        </b></td>
+                </tr>
+
+    </table>
+    <table>
+       
+
+        <tr>
+            <td><input type="text" required [(ngModel)]="userNametobeSearched"></td>
+            <td style="padding-right: 5px"></td>
+            <td><button class="btn btn-success btn-sm" (click)="searchUser()">Search</button></td>
+        </tr>
+    </table>
+    <table>
+            <td>
+                <p></p>
+                <br />
+            </td>
+        </table>
+
+
+    <table id="Mytable" class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Age</th>
+                <th>Title</th>
+                <th>Date Of Joining</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor='let user of response'>
+                <td> {{ user.id }}</td>
+                <td> {{ user.firstname }}</td>
+                <td> {{ user.lastname }}</td>
+                <td>{{ user.age }}</td>
+                <td> {{ user.title }}</td>
+                <td> {{ user.joiningdate }}</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>
